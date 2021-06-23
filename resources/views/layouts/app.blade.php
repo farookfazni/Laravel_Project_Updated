@@ -28,7 +28,7 @@
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
+            <div class="container-fluid">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     Covid19-PMS
                 </a>
@@ -39,7 +39,31 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
+                        <li class="nav-item">
+                            <a href="/home" class="nav-link">
+                                <i class="fa fa-home"></i>Home
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/profile" class="nav-link">
+                                <i class="fa fa-user" aria-hidden="true"></i>My Profile
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/editProfile" class="nav-link active">
+                                <i class="fa fa-pencil" aria-hidden="true"></i>Edit Profile
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fa fa-user-md" aria-hidden="true"></i>Testing
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fa fa-medkit" aria-hidden="true"></i>Vaccaine
+                            </a>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

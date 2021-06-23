@@ -7,10 +7,10 @@
             <form method="POST" action="{{ route('login') }}">
                 @csrf
 
-                <div class="form-group row">
+                <div class="form-group row mb-3">
                     <label for="text" class="col-md-4 col-form-label text-md-right">{{ __('Full Name') }}</label>
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 mb-3">
                         <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name">
 
                         @error('name')
@@ -21,10 +21,10 @@
                     </div>
                 </div>
 
-                <div class="form-group row">
+                <div class="form-group row mb-3">
                     <label for="text" class="col-md-4 col-form-label text-md-right">{{ __('ID No') }}</label>
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 mb-3">
                         <input id="ino" type="text" class="form-control @error('ino') is-invalid @enderror" name="ino">
 
                         @error('ino')
@@ -35,10 +35,10 @@
                     </div>
                 </div>
 
-                <div class="form-group row">
+                <div class="form-group row mb-3">
                     <label for="number" class="col-md-4 col-form-label text-md-right">{{ __('Mobile Number') }}</label>
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 mb-3">
                         <input id="mobile" type="number" class="form-control @error('mobile') is-invalid @enderror" name="mobile">
 
                         @error('mobile')
@@ -49,10 +49,10 @@
                     </div>
                 </div>
 
-                <div class="form-group row">
+                <div class="form-group row mb-3">
                     <label for="text" class="col-md-4 col-form-label text-md-right">{{ __('Address') }}</label>
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 mb-3">
                         <input id="address" type="text" class="form-control @error('address') is-invalid @enderror" name="address" value="{{ old('address') }}" required autocomplete="address" autofocus>
 
                         @error('address')
@@ -63,10 +63,10 @@
                     </div>
                 </div>
 
-                <div class="form-group row">
+                <div class="form-group row mb-3">
                     <label for="text" class="col-md-4 col-form-label text-md-right">{{ __('City') }}</label>
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 mb-3">
                         <input id="city" type="text" class="form-control @error('city') is-invalid @enderror" name="city">
 
                         @error('city')
@@ -77,10 +77,10 @@
                     </div>
                 </div>
 
-                <div class="form-group row">
+                <div class="form-group row mb-3">
                     <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 mb-3">
                         <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
                         @error('email')
@@ -91,10 +91,10 @@
                     </div>
                 </div>
 
-                <div class="form-group row">
+                <div class="form-group row mb-3">
                     <label for="date" class="col-md-4 col-form-label text-md-right">{{ __('Date of Birth') }}</label>
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 mb-3">
                         <input id="dob" type="date" class="form-control @error('dob') is-invalid @enderror" name="dob">
 
                         @error('dob')
@@ -105,10 +105,10 @@
                     </div>
                 </div>
 
-                <div class="form-group row">
+                <div class="form-group row mb-3">
                     <label for="date" class="col-md-4 col-form-label text-md-right">{{ __('Registration Date') }}</label>
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 mb-3">
                         <input id="regdate" type="date" class="form-control @error('regdate') is-invalid @enderror" name="regdate">
 
                         @error('regdate')
@@ -119,10 +119,10 @@
                     </div>
                 </div>
 
-                <div class="form-group row">
+                <div class="form-group row mb-3">
                     <label for="formfile" class="col-md-4 col-form-label text-md-right">{{ __('Profile Picture') }}</label>
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 mb-3">
                         <input id="propic" type="file" class="form-control @error('propic') is-invalid @enderror" name="propic">
 
                         @error('propic')
@@ -133,7 +133,7 @@
                     </div>
                 </div>
 
-                <div class="form-group row mb-0">
+                <div class="form-group row mb-3">
                     <div class="col-md-8 offset-md-4">
                         <button type="submit" class="btn btn-primary">
                             {{ __('Submit') }}
