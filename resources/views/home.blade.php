@@ -23,7 +23,7 @@
         </div> -->
         <div class="row">
             <div class="col-md-4">
-                <div class="card card-profile">
+                <div class="card hover card-shadow card-profile">
                     <div class="card-avatar">
                         <a href="javascript:;">
                             <img class="img" src="/images/Me.jpg" />
@@ -34,6 +34,9 @@
                         <h4 class="card-title">Farook Fazni</h4>
                         <p class="card-description">
                             G/2/3 Samapura Flats Arnold Rathnayaka Mawatha Colombo-10
+                        </p>
+                        <p class="card-description">
+                            <b>Contacts:</b> 075 7502298 | farookfazni@gmail.com
                         </p>
                     </div>
                 </div>
@@ -62,8 +65,90 @@
                 </nav> -->
             </div>
             <div class="col-md-8">
-                @yield('editProfile')
-                @yield('Profile')
+                <div class="card hover card-shadow">
+                    <div class="card-header card-header-warning">
+                        <h4 class="card-title">Testing Results</h4>
+                        <p class="card-category">Recent Tests</p>
+                    </div>
+                    <div class="card-body table-responsive">
+                        <table class="table table-hover">
+                            <thead class="text-warning">
+                                <th>ID_no</th>
+                                <th>Name</th>
+                                <th>Testing Type</th>
+                                <th>Date</th>
+                                <th>Staus</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Fazni Farook</td>
+                                    <td>antigen</td>
+                                    <td>01/20/2021</td>
+                                    <td>Negative</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Fazni Farook</td>
+                                    <td>PCR</td>
+                                    <td>03/04/2021</td>
+                                    <td>Positive</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Fazni Farook</td>
+                                    <td>PCR</td>
+                                    <td>06/18/2021</td>
+                                    <td>Negative</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row;" style="margin-top: 2rem;">
+            <div class="col-md-12">
+                <div class="card hover card-shadow">
+                    <div class="card-header card-header-warning">
+                        <h4 class="card-title">Testing Results</h4>
+                        <p class="card-category">Recent Tests</p>
+                    </div>
+                    <div class="card-body table-responsive">
+                        <table class="table table-hover">
+                            <thead class="text-warning">
+                                <th>ID_no</th>
+                                <th>Name</th>
+                                <th>Testing Type</th>
+                                <th>Date</th>
+                                <th>Staus</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Fazni Farook</td>
+                                    <td>antigen</td>
+                                    <td>01/20/2021</td>
+                                    <td>Negative</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Fazni Farook</td>
+                                    <td>PCR</td>
+                                    <td>03/04/2021</td>
+                                    <td>Positive</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Fazni Farook</td>
+                                    <td>PCR</td>
+                                    <td>06/18/2021</td>
+                                    <td>Negative</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

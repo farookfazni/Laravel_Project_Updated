@@ -45,22 +45,17 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/profile" class="nav-link">
+                            <a href="/editProfile" class="nav-link">
                                 <i class="fa fa-user" aria-hidden="true"></i>My Profile
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/editProfile" class="nav-link active">
-                                <i class="fa fa-pencil" aria-hidden="true"></i>Edit Profile
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="/testing" class="nav-link">
                                 <i class="fa fa-user-md" aria-hidden="true"></i>Testing
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="/vaccaine">
                                 <i class="fa fa-medkit" aria-hidden="true"></i>Vaccaine
                             </a>
                         </li>
@@ -106,6 +101,9 @@
 
         <main class="py-4">
             @yield('content')
+            @yield('editProfile')
+            @yield('vaccaine')
+            @yield('testing')
         </main>
     </div>
 </body>
