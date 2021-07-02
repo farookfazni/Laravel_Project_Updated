@@ -5,6 +5,15 @@
 <body class="home-body">
     <div class="container">
         <div class="row">
+            @if (session('errorMsg'))
+            <div class="alert  alert-icon alert-danger alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <i class="mdi mdi-check-all"></i>
+                <strong>Oh nap!</strong> {{ session('errorMsg') }}
+            </div>
+            @endif
             <div class="col-md-4">
                 <div class="card hover card-shadow card-profile">
                     <div class="card-avatar">
@@ -21,6 +30,46 @@
                         <p class="card-description">
                             <b>Contacts:</b> 075 7502298 | farookfazni@gmail.com
                         </p>
+                    </div>
+                </div>
+                <div class="card hover card-shadow card-profile" style="text-align: left;">
+                    <div class="card-header header">
+                        <h6 class="card-title">Change Password</h6>
+                    </div>
+                    <div class="card-body">
+                        <form class="form-horizontal" method="POST" action="{{ route('update') }}">
+                            @csrf
+                            <div class="mb-3">
+                                <label for="currentpassword">{{ __('Current Password') }}</label>
+                                <input name="currentpassword" type="password" class="form-control @error('currentpassword') is-invalid @enderror" id="currentpassword" placeholder="Current Password">
+                                @error('currentpassword')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
+                            </div>
+                            <div class="mb-3">
+                                <label for="newpassword">{{ __('New Password') }}</label>
+                                <input name="newpassword" type="password" class="form-control @error('newpassword') is-invalid @enderror" id="newpassword" placeholder="New Password">
+                                @error('newpassword')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
+                            </div>
+                            <div class="mb-3">
+                                <label for="conformpassword">{{ __('Conform Password') }}</label>
+                                <input name="conformpassword" type="password" class="form-control @error('conformpassword') is-invalid @enderror" id="conformpassword" placeholder="Conform Password">
+                                @error('conformpassword')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
+                            </div>
+                            <div class="mb-3">
+                                <button type="submit" class="btn btn-primary mb-3">{{ __('Change Password') }}</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
