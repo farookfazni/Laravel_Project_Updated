@@ -23,23 +23,25 @@
         </div> -->
         <div class="row">
             <div class="col-md-4">
+                @foreach($data As $key => $value)
                 <div class="card hover card-shadow card-profile">
                     <div class="card-avatar">
                         <a href="javascript:;">
-                            <img class="img" src="/images/Me.jpg" />
+                            <img class="img" src="/images/profile/{{ $value->propic}}" />
                         </a>
                     </div>
                     <div class="card-body">
-                        <h6 class="card-category text-gray">963250118 v</h6>
-                        <h4 class="card-title">Farook Fazni</h4>
+                        <h6 class="card-category text-gray">{{ $value->ino}}</h6>
+                        <h4 class="card-title">{{ $value->name}}</h4>
                         <p class="card-description">
-                            G/2/3 Samapura Flats Arnold Rathnayaka Mawatha Colombo-10
+                            {{ $value->address}} {{ $value->city}}
                         </p>
                         <p class="card-description">
-                            <b>Contacts:</b> 075 7502298 | farookfazni@gmail.com
+                            <b>Contacts:</b> {{ $value->mobile}} | {{ $value->email}}
                         </p>
                     </div>
                 </div>
+                @endforeach
                 <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
                     <div class="container-fluid">
                         <ul class="nav flex-column">

@@ -52,7 +52,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/editProfile" class="nav-link">
+                            <a href="/profile" class="nav-link">
                                 <i class="fa fa-user" aria-hidden="true"></i>My Profile
                             </a>
                         </li>
@@ -108,9 +108,10 @@
 
         <main class="py-4">
             @yield('content')
-            @yield('editProfile')
+            @yield('profile')
             @yield('vaccaine')
             @yield('testing')
+            @yield('editProfile')
         </main>
     </div>
 </body>
