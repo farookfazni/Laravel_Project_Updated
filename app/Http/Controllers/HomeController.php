@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Testing;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -26,8 +27,14 @@ class HomeController extends Controller
     public function index()
     {
         $data=User::all()->where('id',"==",Auth::id());
-        return view('home',compact('data'));
+        $test=Testing::all()->where('user_id',"==",Auth::id());
+        return view('home',compact('data','test'));
     }
+    // public function test()
+    // {
+    //     $test=Testing::all()->where('user_id',"==",Auth::id());
+    //     return view('home',compact('test'));
+    // }
     // public function editprofile()
     // {
     //     return view('editProfile');

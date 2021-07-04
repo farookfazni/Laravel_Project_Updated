@@ -20,12 +20,13 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::post('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('test');
 Route::get('/profile', [App\Http\Controllers\ProfileController::class, 'profile'])->name('profile');
 Route::post('/profile', [App\Http\Controllers\ProfileController::class, 'changepassword'])->name('update');
-// Route::get('/editProfile', [App\Http\Controllers\EditProfileController::class, 'editProfile'])->name('editProfile');
 Route::post('/profile/editprofile', [App\Http\Controllers\ProfileController::class, 'storeprof'])->name('editprofile');
 Route::get('/vaccaine', [App\Http\Controllers\VaccaineController::class, 'vaccaine'])->name('vaccaine');
 Route::get('/testing', [App\Http\Controllers\TestingController::class, 'testing'])->name('testing');
+Route::post('/testing', [App\Http\Controllers\TestingController::class, 'storetest'])->name('storetest');
 // Route::get('/forget-password', 'ForgotPasswordController@getEmail');
 // Route::post('/forget-password', 'ForgotPasswordController@postEmail');
 

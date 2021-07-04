@@ -82,27 +82,17 @@
                                 <th>Staus</th>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Fazni Farook</td>
-                                    <td>antigen</td>
-                                    <td>01/20/2021</td>
-                                    <td>Negative</td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Fazni Farook</td>
-                                    <td>PCR</td>
-                                    <td>03/04/2021</td>
-                                    <td>Positive</td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>Fazni Farook</td>
-                                    <td>PCR</td>
-                                    <td>06/18/2021</td>
-                                    <td>Negative</td>
-                                </tr>
+                                <form method="POST" action="{{ route('test')}}">
+                                    @foreach($test As $key => $item)
+                                    <tr>
+                                        <td>{{$item['id']}}</td>
+                                        <td>{{$item['name']}}</td>
+                                        <td>{{$item['testtype']}}</td>
+                                        <td>{{$item['testdate']}}</td>
+                                        <td>Negative</td>
+                                    </tr>
+                                    @endforeach
+                                </form>
                             </tbody>
                         </table>
                     </div>
