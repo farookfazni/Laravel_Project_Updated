@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Testing;
 use App\Models\User;
+use App\Models\Vaccaine;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -28,7 +29,8 @@ class HomeController extends Controller
     {
         $data=User::all()->where('id',"==",Auth::id());
         $test=Testing::all()->where('user_id',"==",Auth::id());
-        return view('home',compact('data','test'));
+        $vac=Vaccaine::all()->where('user_id',"==",Auth::id());
+        return view('home',compact('data','test','vac'));
     }
     // public function test()
     // {

@@ -4,78 +4,90 @@
 
 <body class="home-body">
     <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="card hover card-shadow">
-                    <div class="card-header header">
-                        <h6 class="card-title">Personal Information</h6>
-                    </div>
-                    <div class="card-body">
-                        <div class="mb-3">
-                            <label>ID No</label>
-                            <input type="text" class="form-control" placeholder="ID No">
+        @if (session('status'))
+        <div class="alert  alert-icon alert-success alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <i class="mdi mdi-check-all"></i>
+            <strong>Good!</strong> {{ session('status') }}
+        </div>
+        @endif
+        <form method="POST" action="{{ route('storevac') }}" enctype="multipart/form-data">
+            @csrf
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card hover card-shadow">
+                        <div class="card-header header">
+                            <h6 class="card-title">Personal Information</h6>
                         </div>
-                        <div class="mb-3">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <label for="ino">ID No</label>
+                                <input type="text" class="form-control" id="ino" name="ino" placeholder="ID No">
+                            </div>
+                            <!-- <div class="mb-3">
                             <label for="floatingInput">Order No</label>
                             <input type="text" class="form-control" id="floatingInput" placeholder="Order No">
 
-                        </div>
-                        <div class="mb-3">
-                            <label for="floatingInput">Full Name</label>
-                            <input type="name" class="form-control" id="floatingInput" placeholder="Full Name">
+                        </div> -->
+                            <div class="mb-3">
+                                <label for="name">Full Name</label>
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Full Name">
 
-                        </div>
-                        <div class="mb-3">
-                            <label for="floatingInput">Mobile No</label>
-                            <input type="number" class="form-control" id="floatingInput" placeholder="Mobile No">
+                            </div>
+                            <div class="mb-3">
+                                <label for="mobile">Mobile No</label>
+                                <input type="number" class="form-control" id="mobile" name="mobile" placeholder="Mobile No">
 
+                            </div>
+                            <div class="mb-3">
+                                <label for="address">Address</label>
+                                <textarea type="time" class="form-control" id="address" name="address" row="4" placeholder="Address"></textarea>
+                            </div>
                         </div>
-                        <div class="mb-3">
-                            <label for="floatingInput">Address</label>
-                            <textarea type="time" class="form-control" id="floatingInput" row="4" placeholder="Address"></textarea>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card hover card-shadow">
+                        <div class="card-header header">
+                            <h6 class="card-title">Vaccaine Information</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <label for="vactype">Vaccaine Type</label>
+                                <input class="form-control" list="VaccaineType" id="vactype" name="vactype" placeholder="Type">
+                                <datalist id="VaccaineType">
+                                    <option value="Fizer">
+                                    <option value="Sputnic">
+                                    <option value="Sinopharm">
+                                    <option value="covishield">
+                                </datalist>
+                            </div>
+                            <div class="mb-3">
+                                <label for="dose">Dose</label>
+                                <input class="form-control" list="Dose" id="dose" name="dose" placeholder="Dose">
+                                <datalist id="Dose">
+                                    <option value="1st">
+                                    <option value="2nd">
+                                </datalist>
+                            </div>
+                            <div class="mb-3">
+                                <label for="vacdate">Date</label>
+                                <input type="date" class="form-control" id="vacdate" name="vacdate" placeholder="Date">
+                            </div>
+                            <div class="mb-3">
+                                <label for="vactime">Time</label>
+                                <input type="time" class="form-control" id="vactime" name="vactime" placeholder="Time">
+                            </div>
+                            <div class="mb-3">
+                                <button type="submit" class="btn btn-primary mb-3">New Request fot Vaccination</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="card hover card-shadow">
-                    <div class="card-header header">
-                        <h6 class="card-title">Vaccaine Information</h6>
-                    </div>
-                    <div class="card-body">
-                        <div class="mb-3">
-                            <label for="floatingInput">Vaccaine Type</label>
-                            <input class="form-control" list="VaccaineType" id="exampleDataList" placeholder="Type">
-                            <datalist id="VaccaineType">
-                                <option value="Fizer">
-                                <option value="Sputnic">
-                                <option value="Sinopharm">
-                                <option value="covishield">
-                            </datalist>
-                        </div>
-                        <div class="mb-3">
-                            <label for="floatingInput">Dose</label>
-                            <input class="form-control" list="Dose" id="exampleDataList" placeholder="Dose">
-                            <datalist id="Dose">
-                                <option value="1st">
-                                <option value="2nd">
-                            </datalist>
-                        </div>
-                        <div class="mb-3">
-                            <label for="floatingInput">Date</label>
-                            <input type="date" class="form-control" id="floatingInput" placeholder="Date">
-                        </div>
-                        <div class="mb-3">
-                            <label for="floatingInput">Time</label>
-                            <input type="time" class="form-control" id="floatingInput" placeholder="Time">
-                        </div>
-                        <div class="mb-3">
-                            <button type="submit" class="btn btn-primary mb-3">New Request fot Vaccination</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        </form>
     </div>
 </body>
 
