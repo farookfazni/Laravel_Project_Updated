@@ -32,6 +32,18 @@ class HomeController extends Controller
         $vac=Vaccaine::all()->where('user_id',"==",Auth::id());
         return view('home',compact('data','test','vac'));
     }
+    public function delete($id)
+    {
+        $test=Testing::find($id);
+        $test->delete();
+        return redirect('home');
+    }
+    public function deletevac($id)
+    {
+        $vac=Vaccaine::find($id);
+        $vac->delete();
+        return redirect('home');
+    }
     // public function test()
     // {
     //     $test=Testing::all()->where('user_id',"==",Auth::id());

@@ -81,7 +81,7 @@
                                 <input type="time" class="form-control" id="vactime" name="vactime" placeholder="Time">
                             </div>
                             <div class="mb-3">
-                                <button type="submit" class="btn btn-primary mb-3">New Request fot Vaccination</button>
+                                <button type="submit" class="btn btn-primary mb-3">New Request for Vaccination</button>
                             </div>
                         </div>
                     </div>

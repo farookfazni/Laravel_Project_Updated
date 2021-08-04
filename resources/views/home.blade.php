@@ -69,7 +69,7 @@
             <div class="col-md-8">
                 <div class="card hover card-shadow">
                     <div class="card-header card-header-warning">
-                        <h4 class="card-title">Testing Results</h4>
+                        <h4 class="card-title">Testing Requests</h4>
                         <p class="card-category">Recent Tests</p>
                     </div>
                     <div class="card-body table-responsive">
@@ -79,7 +79,7 @@
                                 <th>Name</th>
                                 <th>Testing Type</th>
                                 <th>Date</th>
-                                <th>Staus</th>
+                                <th>Cancel Request</th>
                             </thead>
                             <tbody>
                                 <form method="POST" action="{{ route('test')}}">
@@ -89,7 +89,7 @@
                                         <td>{{$item['name']}}</td>
                                         <td>{{$item['testtype']}}</td>
                                         <td>{{$item['testdate']}}</td>
-                                        <td>Negative</td>
+                                        <td style="text-align: center;"><a href={{"delete/".$item['id']}}><i class="fa fa-trash" aria-hidden="true"></i></a></td>
                                     </tr>
                                     @endforeach
                                 </form>
@@ -103,7 +103,7 @@
             <div class="col-md-12">
                 <div class="card hover card-shadow">
                     <div class="card-header card-header-warning">
-                        <h4 class="card-title">Vaccine Info</h4>
+                        <h4 class="card-title">Vaccine Request</h4>
                     </div>
                     <div class="card-body table-responsive">
                         <table class="table table-hover">
@@ -113,6 +113,7 @@
                                 <th>Vaccaine Type</th>
                                 <th>Dose</th>
                                 <th>Date</th>
+                                <th>Cancel Request</th>
                             </thead>
                             <tbody>
                                 <form method="POST" action="{{ route('vac')}}">
@@ -123,6 +124,7 @@
                                         <td>{{$item['vactype']}}</td>
                                         <td>{{$item['dose']}}</td>
                                         <td>{{$item['vacdate']}}</td>
+                                        <td style="text-align: center;"><a href={{"deletevac/".$item['id']}}><i class="fa fa-trash" aria-hidden="true"></i></a></td>
                                     </tr>
                                     @endforeach
                                 </form>

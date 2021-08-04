@@ -20,6 +20,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/delete/{id}', [App\Http\Controllers\HomeController::class, 'delete'])->name('home');
+Route::get('/deletevac/{id}', [App\Http\Controllers\HomeController::class, 'deletevac'])->name('home');
 Route::post('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('test');
 Route::post('/home/vac', [App\Http\Controllers\HomeController::class, 'index'])->name('vac');
 Route::get('/profile', [App\Http\Controllers\ProfileController::class, 'profile'])->name('profile');
